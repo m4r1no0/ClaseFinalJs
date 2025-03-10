@@ -1,0 +1,13 @@
+img{
+    width: 100px;
+}
+.contenido-imagen{
+    place-self: center
+}
+.letra{
+    justify-items: anchor-center;
+}
+.carta{
+    width: 30%;
+    justify-self: center
+}
