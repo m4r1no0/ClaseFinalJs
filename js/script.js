@@ -49,7 +49,8 @@ async function obtenerPersonaje(id) {
 
             // console.log(nombre);
 
-            
+            let contenidoT =document.querySelector('#contenidoT');
+            contenidoT.innerHTML = "";
             //verificar si la propiedad es un arreglo
             if (Array.isArray(items)) {
                 //iterar sobre los elementos del arreglo
@@ -59,8 +60,21 @@ async function obtenerPersonaje(id) {
                     console.log(item.ki);
 
                     let nombreTrasformacion = item.name;
-                    let ki = item.ki;
+                    let kiT = item.ki;
+                    let imageT = item.image
 
+                    const nombreT = document.createElement('h3');
+                    const kiTr = document.createElement('h3');
+                    const imageTr = document.createElement('img');
+
+                    nombreT.textContent = nombreTrasformacion;
+                    kiTr.textContent = kiT;
+                    imageTr.src = imageT;
+
+                    contenidoT.appendChild(nombreT);
+                    contenidoT.appendChild(kiTr);
+                    contenidoT.appendChild(imageTr);
+                    
                     
 
 
@@ -141,7 +155,6 @@ n = 1;
     obtenerPersonaje(n);
 };
 
-obtenerPersonaje(n);
 
 function valorNegativo (){
     
