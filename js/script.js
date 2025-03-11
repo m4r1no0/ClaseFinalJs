@@ -18,15 +18,8 @@ async function obtenerPersonaje(id) {
 
         // Convertimos la respuesta a JSON (esto también es asíncrono)
         const personaje = await respuesta.json();
-
         const elementId = personaje.name;
-        // console.log(elementId);
-
-
         const valor = personaje.transformations;
-
-
-
 
         // Mostramos el personaje en consola
         console.log('Personaje obtenido:', personaje);
@@ -74,14 +67,8 @@ async function obtenerPersonaje(id) {
                     contenidoT.appendChild(nombreT);
                     contenidoT.appendChild(kiTr);
                     contenidoT.appendChild(imageTr);
-                    
-                    
-
 
                     console.log(nombreTrasformacion);
-
-
-                    
                 });
             }else if( typeof items === 'object'){
                 // console.log('Objeto encontrado');
@@ -106,39 +93,16 @@ async function obtenerPersonaje(id) {
 
         const imagenC = document.querySelector('.imagenC');
         const nombreC = document.querySelector('.nombre');
-        
-        
-        
-
         imagenC.src = personaje.image;
         nombreC.textContent = personaje.name;
-        
-
-
-
-
-
-
-
 
         return personaje;
-
 
     } catch (error) {
         console.error('Error al obtener el personaje:', error.message);
     }
 
 };
-
-
-
-
-
-    
-
-
-
-// Ejecutamos la función (puede ser desde un botón, un evento o directamente)
 
 n = 1;
  function valor (){
